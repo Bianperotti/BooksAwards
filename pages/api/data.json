@@ -1,0 +1,281 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 680,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "N_haEAAAQBAJ",
+      "etag": "4xOgoj74VVI",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/N_haEAAAQBAJ",
+      "volumeInfo": {
+        "title": "A Court of Mist and Fury",
+        "authors": [
+          "Sarah J. Maas"
+        ],
+        "publisher": "Bloomsbury Publishing USA",
+        "publishedDate": "2020-06-02",
+        "description": "\"Feyre survived Amarantha's clutches to return to the Spring Court -- but at a steep cost. Though she now has the powers of the High Fae, her heart remains human, and it can't forget the terrible deeds she performed to save Tamlin's people. Nor has Feyre forgotten her bargain with Rhysand, High Lord of the feared Night Court. As Feyre navigates its dark web of politics, passion, and dazzling power, a greater evil looms -- and she might be key to stopping it. But only if she can harness her harrowing gifts, heal her fractured soul, and decide how she wishes to shape her future -- and the future of a world cleaved in two.\"--Provided by publisher.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781635575583"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1635575583"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 656,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 62,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=N_haEAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=N_haEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.es/books?id=N_haEAAAQBAJ&dq=a+court+of+mist&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.es/books?id=N_haEAAAQBAJ&dq=a+court+of+mist&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/A_Court_of_Mist_and_Fury.html?hl=&id=N_haEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "ES",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "ES",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=N_haEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Feyre survived Amarantha&#39;s clutches to return to the Spring Court -- but at a steep cost."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "LtEkCwAAQBAJ",
+      "etag": "sTH3o/Inywo",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/LtEkCwAAQBAJ",
+      "volumeInfo": {
+        "title": "A Court of Mist and Fury",
+        "subtitle": "The #1 bestselling series",
+        "authors": [
+          "Sarah J. Maas"
+        ],
+        "publisher": "Bloomsbury Publishing",
+        "publishedDate": "2016-05-03",
+        "description": "Feyre survived Amarantha's clutches to return to the Spring Court – but at a steep cost. Though she now possesses the powers of the High Fae, her heart remains human, and it can't forget the terrible deeds she performed to save Tamlin's people. Nor has Feyre forgotten her bargain with Rhysand, the mesmerising High Lord of the feared Night Court. As Feyre navigates his dark web of political games and tantalising promises, a greater evil looms – and she might be key to stopping it. But only if she can step into her growing power, heal her fractured soul and have the courage to shape her own future – and the future of a world cloven in two. Sarah J. Maas is a global #1 bestselling author. Her books have sold more than nine million copies and been translated into 37 languages. Discover the sweeping romantic fantasy for yourself.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781408857892"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1408857898"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 432,
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 66,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "3.18.16.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=LtEkCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=LtEkCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.es/books?id=LtEkCwAAQBAJ&printsec=frontcover&dq=a+court+of+mist&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=LtEkCwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=LtEkCwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "ES",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 10.19,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 9.68,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=LtEkCwAAQBAJ&rdid=book-LtEkCwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 10190000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 9680000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "ES",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.es/books/download/A_Court_of_Mist_and_Fury-sample-epub.acsm?id=LtEkCwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.es/books/download/A_Court_of_Mist_and_Fury-sample-pdf.acsm?id=LtEkCwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=LtEkCwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "But only if she can step into her growing power, heal her fractured soul and have the courage to shape her own future – and the future of a world cloven in two. Sarah J. Maas is a global #1 bestselling author."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Y-tFEAAAQBAJ",
+      "etag": "Uy3maepv7Ps",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Y-tFEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Una corte de llamas plateadas",
+        "subtitle": "#5",
+        "authors": [
+          "Sarah J. Maas"
+        ],
+        "publisher": "Planeta Argentina",
+        "publishedDate": "2021-10-01",
+        "description": "Un poder insondable. Desde que fue forzada a meterse en el Caldero y se convirtió en alta fae en contra de su voluntad, Nesta Archeron lucha por encontrar su propio lugar dentro del extraño y letal mundo en el que habita. A su temperamento irascible se suma la dificultad para superar los horrores de la guerra con Hybern y todo lo que perdió en ella. Mientras que Cassian, miembro de la Corte Noche de Rhysand y Feyre, es designado para entrenar a la incontrolable Nesta y entre ellos se enciende el más ardiente de los fuegos, las traidoras reinas humanas forjan una nueva y peligrosa alianza que amenaza la frágil paz establecida entre los reinos. Y la clave para detenerlas podría depender de que Cassian y Nesta logren superar sus inquietantes pasados. En un mundo arrasado por la guerra, Nesta y Cassian deberán enfrentarse tanto a sus monstruos interiores como a los que acechan en el exterior, y buscarán la aceptación –y la curación– en brazos del otro.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789504975021"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "950497502X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 816,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Fiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Y-tFEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Y-tFEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "es",
+        "previewLink": "http://books.google.es/books?id=Y-tFEAAAQBAJ&pg=PP1&dq=a+court+of+mist&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=Y-tFEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Y-tFEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "ES",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 10.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 10.44,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=Y-tFEAAAQBAJ&rdid=book-Y-tFEAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 10990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 10440000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "ES",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.es/books/download/Una_corte_de_llamas_plateadas-sample-epub.acsm?id=Y-tFEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.es/books/download/Una_corte_de_llamas_plateadas-sample-pdf.acsm?id=Y-tFEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Y-tFEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Un poder insondable."
+      }
+    }
+  ]
+}
