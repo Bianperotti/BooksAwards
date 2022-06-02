@@ -4,7 +4,6 @@ import AwardCard from '../components/AwardCard'
 import { getAwards } from './api/awardsApi'
 
 export async function getServerSideProps() {
- 
   const awards = await getAwards()
 
   return { props: { awards } }
