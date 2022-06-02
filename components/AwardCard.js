@@ -1,12 +1,24 @@
+const colors = {
+  green: 'from-green-500/50 to-emerald-700/50',
+  cyan: 'from-cyan-400/50 to-cyan-600/50',
+  orange: 'from-orange-500/50 to-orange-700/50',
+  red: 'from-red-500/50 to-orange-700/50',
+  green2: 'from-green-400/50 to-emerald-600/50',
+  pink: 'from-fuchsia-500/50 to-pink-600/50',
+}
+
 const AwardCard = ({ award }) => {
   console.log(award)
+  const colorClasses = colors[award.colours]
 
   return (
     // <h1>hola</h1>
     <a
       key={award.id}
-      href="/awards/first-award"
-      className={`flex h-48 rounded-xl border bg-gradient-to-r ${award.colours} p-4 text-left focus:text-blue-600" hover:text-blue-600`}
+      href="/awards/vote_page"
+      className={
+        `focus:text-blue-600 flex h-48 rounded-xl border bg-gradient-to-r p-4 text-left hover:text-blue-600 ${colorClasses}`
+      }
     >
       <div className="relative">
         <img
