@@ -1,13 +1,11 @@
 import Head from 'next/head'
 import data from './api/data.json'
 import AwardCard from '../components/AwardCard'
+import { getAwards } from './api/awardsApi'
 
 export async function getServerSideProps() {
-  const awardsReq = await fetch(
-    `https://stingray-app-ozczk.ondigitalocean.app/items/awards?fields=id,name,colours,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover`
-  )
-
-  const { data: awards } = await awardsReq.json()
+ 
+  const awards = await getAwards()
 
   return { props: { awards } }
 }
