@@ -1,10 +1,20 @@
 import Head from 'next/head'
 import data from './api/data.json'
+import AwardCard from '../components/AwardCard'
 
-const Home = () => {
-  const books = data.items
-  const imageOne = data.items[0].volumeInfo.imageLinks.thumbnail
-  console.log(imageOne)
+export async function getServerSideProps() {
+  const awardsReq = await fetch(
+    `https://stingray-app-ozczk.ondigitalocean.app/items/awards?fields=id,name,colours,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover`
+  )
+
+  const { data: awards } = await awardsReq.json()
+
+  return { props: { awards } }
+}
+
+const Home = ({ awards }) => {
+  // console.log(awards)
+
   return (
     <div className="flex flex-col items-center justify-center py-2">
       <Head>
@@ -12,31 +22,19 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl m-8 font-semibold ">
-        <div className="flex mb-8">
-          <h1 className="w-3/5 text-6xl leading-tight place-items-center">
+      <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
+        <div className="flex items-center mb-16">
+          <h1 className="text-6xl sm:leading-[1.2] md:w-3/5 sm:text-7xl">
             <span className="px-2 text-white bg-orange-500">Vote</span> & fun
             with random <span className="text-emerald-500 ">BOOKS</span> awards!
           </h1>
-          <img className='w-2/5' src="6870523.svg"></img>
+          <img className="hidden w-2/5 sm:block" src="6870523.svg"></img>
         </div>
-
-        <a
-          href="/awards/first-award"
-          className="flex p-4 m-8 text-left border h-52 w-96 rounded-xl bg-gradient-to-r from-green-500/50 to-emerald-700/50 hover:text-blue-600 focus:text-blue-600"
-        >
-          <div className="relative">
-            <img
-              className="relative rounded-lg -top-14 w-36"
-              src={imageOne}
-            ></img>
-          </div>
-          <div className="w-3/5 p-6">
-            <h2 className="text-2xl text-white ">
-              The book that make you cry the most
-            </h2>
-          </div>
-        </a>
+        <div className="grid mt-16 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+          {awards.map((award) => (
+            <AwardCard award={award} key={award.id} />
+          ))}
+        </div>
       </main>
     </div>
   )
