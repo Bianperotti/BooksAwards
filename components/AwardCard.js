@@ -8,17 +8,13 @@ const colors = {
 }
 
 const AwardCard = ({ award }) => {
-  console.log(award)
   const colorClasses = colors[award.colours]
 
   return (
-    // <h1>hola</h1>
     <a
       key={award.id}
-      href="/awards/vote_page"
-      className={
-        `focus:text-blue-600 flex h-48 rounded-xl border bg-gradient-to-r p-4 text-left hover:text-blue-600 ${colorClasses}`
-      }
+      href={`/awards/${award.slug}`}
+      className={`flex h-48 rounded-xl border bg-gradient-to-r p-4 text-left hover:text-blue-600 focus:text-blue-600 ${colorClasses}`}
     >
       <div className="relative">
         <img
