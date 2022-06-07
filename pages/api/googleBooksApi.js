@@ -9,5 +9,5 @@ export async function getBooks(input) {
   const request = await gBooksApi.get(
     `${input}&intitle&maxResults=3&Keyes&key=${api_key}`
   )
-  return request.data
+  return request.data.items
 }
