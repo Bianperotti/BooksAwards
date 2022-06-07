@@ -1,13 +1,6 @@
-// const BookCard = ({ award }) => {
-//   const votedBooks = award.awarded_books
-//   console.log(votedBooks);
-//   return ()
-//     // <h1>hola {award.awarded_books[0].book.title}</h1>
-// }
-
 const BookCard = ({ award }) => {
   const votedBooks = award.awarded_books
-  console.log(votedBooks)
+
   return (
     <>
       {votedBooks.map((book) => (

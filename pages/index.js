@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import data from './api/data.json'
 import AwardCard from '../components/AwardCard'
 import { getAwards } from './api/awardsApi'
 
@@ -10,7 +9,6 @@ export async function getServerSideProps() {
 }
 
 const Home = ({ awards }) => {
-  // console.log(awards)
 
   return (
     <div className="flex flex-col items-center justify-center py-2">
