@@ -1,7 +1,8 @@
 import { getAward } from '../api/awardsApi'
-import BookCard from '../../components/BookCard'
+import BookCardCms from '../../components/BookCardCms'
 import { getBooks } from '../api/googleBooksApi'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import BookCardApi from '../../components/BookCardApi'
 
 export async function getServerSideProps(context) {
   const slug = context.params.slug
@@ -24,21 +25,24 @@ const votePage = ({ award }) => {
   const [books, setBooks] = useState([])
   const [bookInput, setBookInput] = useState('')
 
+  const inputRef = useRef(null)
+
   useEffect(() => {
-    // console.log('effect')
+    const timer = setTimeout(() => {
+      if (inputRef.current.value === bookInput) {
+        getBooks(bookInput)
+          .then((b) => {
+            // console.log(b)
+            setBooks(b)
+          })
+          .catch((e) => e)
+      }
+    }, 500)
 
-    // const eventHandler = response => {
-    //   console.log('promise fulfilled')
-    //   setNotes(response.data)
-    // }
-
-    getBooks(bookInput)
-      .then(b => console.log(b))
-      .catch((e) => e)
-
-    // const promise = axios.get('http://localhost:3001/notes')
-    // promise.then(eventHandler)
-  }, [bookInput])
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [bookInput, inputRef])
 
   return (
     <div className="flex flex-col items-center justify-center py-2">
@@ -49,9 +53,14 @@ const votePage = ({ award }) => {
           placeholder="Vote another book..."
           onChange={(e) => setBookInput(e.target.value)}
           value={bookInput}
+          ref={inputRef}
         ></input>
         <div className="grid grid-cols-2 mt-16 gap-x-8 gap-y-16 sm:grid-cols-3 lg:grid-cols-5">
-          <BookCard award={award} />
+          {!bookInput ? 
+            <BookCardCms award={award} />
+           : 
+            <BookCardApi books={books} />
+          }
         </div>
       </main>
     </div>
