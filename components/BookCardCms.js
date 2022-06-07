@@ -1,4 +1,4 @@
-const BookCard = ({ award }) => {
+const BookCardCms = ({ award }) => {
   const votedBooks = award.awarded_books
 
   return (
@@ -18,4 +18,4 @@ const BookCard = ({ award }) => {
   )
 }
 
-export default BookCard
+export default BookCardCms
