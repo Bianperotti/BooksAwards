@@ -1,6 +1,6 @@
 import { getAward } from '../api/awardsApi'
 import BookCardCms from '../../components/BookCardCms'
-import { getBooks } from '../api/googleBooksApi'
+import { getBooksGApi } from '../api/googleBooksApi'
 import { useState, useEffect, useRef } from 'react'
 import BookCardApi from '../../components/BookCardApi'
 
@@ -30,7 +30,7 @@ const votePage = ({ award }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (inputRef.current.value === bookInput) {
-        getBooks(bookInput)
+        getBooksGApi(bookInput)
           .then((b) => {
             // console.log(b)
             setBooks(b)
@@ -59,7 +59,7 @@ const votePage = ({ award }) => {
           {!bookInput ? 
             <BookCardCms award={award} />
            : 
-            <BookCardApi books={books} />
+            <BookCardApi books={books} award={award} />
           }
         </div>
       </main>

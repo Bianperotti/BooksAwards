@@ -1,4 +1,13 @@
-const BookCardApi = ({ books }) => {
+import { foundBook } from '../pages/api/awardsApi'
+
+const BookCardApi = ({ books, award }) => {
+  // console.log(books[0].volumeInfo.imageLinks.thumbnail)
+
+  // const bigImage = (url) => {
+  //   const imgUrl = url?.smallThumbnail
+  //   const imgZoom = imgUrl?.replace('zoom=5', 'zoom=10')
+  //   return imgZoom
+  // }
 
   return (
     <>
@@ -6,9 +15,14 @@ const BookCardApi = ({ books }) => {
         <div className="relative" key={book.id}>
           <img
             className="relative h-56 rounded-lg -top-2 w-36"
-            src={`https://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=fife=w400-h600&source=gbs_api`}
+            // src={bigImage(book.volumeInfo.imageLinks)}
+            // src={`https://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=fife=w400-h600&source=gbs_api`}
+            src={book.volumeInfo.imageLinks?.thumbnail}
           ></img>
-          <button className="px-4 py-2 text-xl text-white rounded w-36 bg-orange-500/75 hover:bg-orange-700/75 ">
+          <button
+            onClick={() => foundBook(book, award)}
+            className="px-4 py-2 text-xl text-white rounded w-36 bg-orange-500/75 hover:bg-orange-700/75 "
+          >
             vote
           </button>
         </div>

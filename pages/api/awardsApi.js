@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { get } from 'lodash'
 const api_key = '^jjw.MT2L[z]RZ^X@P38cYc;jynw]_'
 
 export const apiCms = axios.create({
@@ -9,7 +10,7 @@ export async function getAwards() {
   const awardsReq = await apiCms.get(
     `items/awards?fields=id,name,slug,colours,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover`
   )
-  console.log(awardsReq)
+  // console.log(awardsReq)
 
   const { data: awards } = awardsReq
 
@@ -43,4 +44,46 @@ export async function updateVotes(id) {
   )
 
   return updateVotes ? true : false
+}
+
+export async function foundBook(book, award) {
+  console.log(book)
+  console.log(award)
+
+  try {
+    const {
+      data: { data: foundedBook },
+    } = await apiCms.get(`items/books/${book.id}`)
+  } catch (error) {
+    // return false
+
+    const bookCover = await apiCms.post(
+      `files/import`,
+      {
+        url: book.volumeInfo.imageLinks.thumbnail,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${api_key}`,
+        },
+      }
+    )
+
+    const addBook = await apiCms.post(
+      `items/books`,
+      {
+        title: book.volumeInfo.title,
+        author: book.volumeInfo.authors[0],
+        awards: [award.id],
+        cover: bookCover.data.data.id,
+        googleBooksId: book.id,
+        votes: 1
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${api_key}`,
+        },
+      }
+    )
+  }
 }
