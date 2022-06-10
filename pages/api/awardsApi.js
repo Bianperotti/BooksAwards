@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { get } from 'lodash'
 const api_key = '^jjw.MT2L[z]RZ^X@P38cYc;jynw]_'
 
 export const apiCms = axios.create({
