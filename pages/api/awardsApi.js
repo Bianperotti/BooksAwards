@@ -27,100 +27,20 @@ export async function getAward(slug) {
 }
 
 export async function updateVotes(id) {
-  const awardedBook = await apiCms.get(`items/awards_books/${id}`)
-  const newVotes = awardedBook.data.data.votes + 1
+  const updatedVote = await axios.post('/api/handlerVote', { id })
 
-  const updateVotes = await apiCms.patch(
-    `items/awards_books/${id}`,
-    {
-      votes: newVotes,
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${api_key}`,
-      },
-    }
-  )
-
-  return updateVotes ? true : false
+  return updatedVote
 }
 
 export async function foundBook(book, award) {
-  // console.log(book.id)
-  // console.log(award)
+  const foundedBook = await axios.post('/api/handlerBookAndVote', {
+    book,
+    award,
+  })
+  return foundedBook
+}
 
-  try {
-    const {
-      data: { data: foundedBook },
-    } = await apiCms.get(
-      `items/books?filter[googleBooksId][_eq]=${book.id}&fields=*,awards.*`
-    )
-
-    // console.log(foundedBook[0].title)
-    // console.log(award.name)
-
-    if (foundedBook.length > 0) {
-      const book = foundedBook[0]
-
-      if (book.awards[0].award === award.id) {
-        updateVotes(book.awards[0].id)
-
-        console.log(`+ 1 voto al libro: ${book.title} en award: ${award.name}`)
-      } else {
-        const addAwardsBooks = await apiCms.post(
-          `items/awards_books`,
-          {
-            award: award.id,
-            book: book.id,
-            votes: 1,
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${api_key}`,
-            },
-          }
-        )
-        console.log(
-          `Primer voto del libro: ${book.title} en award: ${award.name}`
-        )
-      }
-    } else {
-      const bookCover = await apiCms.post(
-        `files/import`,
-        {
-          url: book.volumeInfo.imageLinks.thumbnail,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${api_key}`,
-          },
-        }
-      )
-
-      const addBookAndVote = await apiCms.post(
-        `items/awards_books`,
-        {
-          award: award.id,
-          book: {
-            title: book.volumeInfo.title,
-            author: book.volumeInfo.authors[0],
-            cover: bookCover.data.data.id,
-            googleBooksId: book.id,
-          },
-          votes: 1,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${api_key}`,
-          },
-        }
-      )
-
-      console.log(
-        `libro agregado: ${book.volumeInfo.title} en award: ${award.name}`
-      )
-    }
-  } catch (error) {
-    console.log('error')
-  }
+export async function getBooksGApi(input) {
+  const getBooks = await axios.post('/api/googleBooksApi', { input })
+  return getBooks
 }

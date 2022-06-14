@@ -1,6 +1,6 @@
 import { getAward } from '../api/awardsApi'
 import BookCardCms from '../../components/BookCardCms'
-import { getBooksGApi } from '../api/googleBooksApi'
+import { getBooksGApi } from '../api/awardsApi'
 import { useState, useEffect, useRef } from 'react'
 import BookCardApi from '../../components/BookCardApi'
 
@@ -32,8 +32,8 @@ const votePage = ({ award }) => {
       if (inputRef.current.value === bookInput) {
         getBooksGApi(bookInput)
           .then((b) => {
-            // console.log(b)
-            setBooks(b)
+            console.log(b.data)
+            setBooks(b.data)
           })
           .catch((e) => e)
       }
@@ -43,6 +43,8 @@ const votePage = ({ award }) => {
       clearTimeout(timer)
     }
   }, [bookInput, inputRef])
+
+  // console.log(books);
 
   return (
     <div className="flex flex-col items-center justify-center py-2">
