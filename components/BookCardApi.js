@@ -9,6 +9,11 @@ const BookCardApi = ({ books, award }) => {
   //   return imgZoom
   // }
 
+  const handleClick = (book) => {
+    foundBook(book, award)
+    setUserVote(true)
+  }
+
   return (
     <>
       {books.map((book) => (
@@ -20,7 +25,7 @@ const BookCardApi = ({ books, award }) => {
             src={book.volumeInfo.imageLinks?.thumbnail}
           ></img>
           <button
-            onClick={() => foundBook(book, award)}
+            onClick={() => handleClick(book)}
             className="px-4 py-2 text-xl text-white rounded w-36 bg-orange-500/75 hover:bg-orange-700/75 "
           >
             vote
