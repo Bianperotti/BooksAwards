@@ -62,7 +62,7 @@ const votePage = ({ award }) => {
               {!bookInput ? 
                 <BookCardCms award={award} setUserVote={setUserVote} />
                : 
-                <BookCardApi books={books} award={award} userVote={userVote} />
+                <BookCardApi books={books} award={award} setUserVote={setUserVote} />
               }
             </div>
           </>

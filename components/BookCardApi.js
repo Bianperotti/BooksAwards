@@ -1,6 +1,6 @@
 import { foundBook } from '../pages/api/awardsApi'
 
-const BookCardApi = ({ books, award }) => {
+const BookCardApi = ({ books, award, setUserVote }) => {
   // console.log(books[0].volumeInfo.imageLinks.thumbnail)
 
   // const bigImage = (url) => {
