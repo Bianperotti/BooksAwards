@@ -8,3 +8,21 @@ GET https://www.googleapis.com/books/v1/volumes?q=a+court+of+mist+intitle&maxRes
 ###
 GET https://www.googleapis.com/books/v1/volumes?q=search-terms&key={{api_key}}
 
+###
+POST http://localhost:3000/api/handlerVote
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 20
+}
+
+
+###
+POST http://localhost:3000/api/googleBooksApi
+Content-Type: application/json
+Accept: application/json
+
+{
+  "input": "The Song of Achilles"
+}
