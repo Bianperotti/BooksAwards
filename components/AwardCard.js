@@ -10,6 +10,10 @@ const colors = {
 const AwardCard = ({ award }) => {
   const colorClasses = colors[award.colours]
 
+  const winnerBook = award.awarded_books.sort((a, b) => b.votes - a.votes)
+  winnerBook.length = 1
+  console.log(winnerBook)
+
   return (
     <a
       key={award.id}
@@ -19,7 +23,7 @@ const AwardCard = ({ award }) => {
       <div className="relative">
         <img
           className="relative rounded-lg -top-14 w-36"
-          src={`https://stingray-app-ozczk.ondigitalocean.app/assets/${award.awarded_books[0].book.cover}`}
+          src={`https://stingray-app-ozczk.ondigitalocean.app/assets/${winnerBook[0].book.cover}`}
         ></img>
       </div>
       <div className="self-center w-3/5 p-4 pr-0">
