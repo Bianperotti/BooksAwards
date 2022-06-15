@@ -1,8 +1,10 @@
 import { updateVotes } from '../pages/api/awardsApi'
 
 const BookCardCms = ({ award, setUserVote }) => {
+  const votedBooks = award.awarded_books.sort((a, b) => b.votes - a.votes)
 
-  const votedBooks = award.awarded_books
+  votedBooks.length = 12
+  console.log(votedBooks);
 
   const handleClick = (book) => {
     updateVotes(book.id)
