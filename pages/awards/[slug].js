@@ -3,7 +3,7 @@ import BookCardCms from '../../components/BookCardCms'
 import { getBooksGApi } from '../api/awardsApi'
 import { useState, useEffect, useRef } from 'react'
 import BookCardApi from '../../components/BookCardApi'
-import BooksOrder from '../../components/BooksOrder'
+import AwardResults from '../../components/AwardResults'
 
 export async function getServerSideProps(context) {
   const slug = context.params.slug
@@ -71,7 +71,7 @@ const votePage = ({ award }) => {
             </div>
           </>
         ) : (
-          <BooksOrder award={award} />
+          <AwardResults award={award} />
         )}
       </main>
     </div>
