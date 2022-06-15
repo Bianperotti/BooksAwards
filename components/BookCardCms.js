@@ -3,8 +3,7 @@ import { updateVotes } from '../pages/api/awardsApi'
 const BookCardCms = ({ award, setUserVote }) => {
   const votedBooks = award.awarded_books.sort((a, b) => b.votes - a.votes)
 
-  votedBooks.length = 12
-  console.log(votedBooks);
+  if (votedBooks.length > 12) votedBooks.length = 12
 
   const handleClick = (book) => {
     updateVotes(book.id)
