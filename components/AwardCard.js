@@ -14,7 +14,7 @@ const AwardCard = ({ award }) => {
     <a
       key={award.id}
       href={`/awards/${award.slug}`}
-      className={`flex h-48 rounded-xl border bg-gradient-to-r p-4 text-left hover:text-blue-600 focus:text-blue-600 ${colorClasses}`}
+      className={`flex h-48 rounded-xl border bg-gradient-to-r p-4 text-left ${colorClasses}`}
     >
       <div className="relative">
         <img

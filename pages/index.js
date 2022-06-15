@@ -25,7 +25,7 @@ const Home = ({ awards }) => {
           </h1>
           <img className="hidden w-2/5 sm:block" src="6870523.svg"></img>
         </div>
-        <div className="grid mt-16 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid mt-16 mb-16 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
           {awards.map((award) => (
             <AwardCard award={award} key={award.id} />
           ))}
