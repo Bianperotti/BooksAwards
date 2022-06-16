@@ -1,5 +1,4 @@
 import axios from 'axios'
-const api_key = '^jjw.MT2L[z]RZ^X@P38cYc;jynw]_'
 
 export const apiCms = axios.create({
   baseURL: 'https://stingray-app-ozczk.ondigitalocean.app/',
@@ -9,7 +8,6 @@ export async function getAwards() {
   const awardsReq = await apiCms.get(
     `items/awards?fields=id,name,slug,colours,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover`
   )
-  // console.log(awardsReq)
 
   const { data: awards } = awardsReq
 
