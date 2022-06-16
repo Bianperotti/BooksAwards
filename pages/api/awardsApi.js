@@ -42,3 +42,13 @@ export async function getBooksGApi(input) {
   const getBooks = await axios.post('/api/googleBooksApi', { input })
   return getBooks
 }
+
+export async function getTotalVotes() {
+  const awardsReq = await apiCms.get(
+    `items/awards_books?fields=votes&aggregate[sum]=votes`
+  )
+
+  const { data: totalVotes } = awardsReq
+
+  return totalVotes.data[0].sum.votes
+}
