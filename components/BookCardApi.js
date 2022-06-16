@@ -1,17 +1,18 @@
 import { foundBook } from '../pages/api/awardsApi'
+import { useRouter } from 'next/router'
 
 const BookCardApi = ({ books, award, setUserVote }) => {
-  // console.log(books[0].volumeInfo.imageLinks.thumbnail)
-
   // const bigImage = (url) => {
   //   const imgUrl = url?.smallThumbnail
   //   const imgZoom = imgUrl?.replace('zoom=5', 'zoom=10')
   //   return imgZoom
   // }
+  const router = useRouter()
 
-  const handleClick = (book) => {
-    foundBook(book, award)
+  const handleClick = async (book) => {
+    await foundBook(book, award)
     setUserVote(true)
+    router.replace(router.asPath)
   }
 
   return (
