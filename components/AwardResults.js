@@ -2,7 +2,6 @@ import WinnerBookCard from './WinnerBookCard'
 
 const AwardResults = ({ award }) => {
   const sortedBooks = award.awarded_books.sort((a, b) => b.votes - a.votes)
-
   sortedBooks.length = 4
 
   return (
@@ -19,8 +18,7 @@ const AwardResults = ({ award }) => {
       </div>
       <a
         href={`/`}
-        type="button"
-        class="mb-8 rounded-lg bg-gradient-to-br px-20 py-5 text-xl text-white bg-orange-500/75 hover:bg-orange-700/75"
+        className="px-20 py-5 mb-8 text-xl text-white rounded-lg bg-orange-500/75 bg-gradient-to-br hover:bg-orange-700/75"
       >
         Keep voting
       </a>

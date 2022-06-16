@@ -59,15 +59,15 @@ const votePage = ({ award }) => {
               ref={inputRef}
             ></input>
             <div className="grid grid-cols-2 mt-16 gap-x-8 gap-y-16 sm:grid-cols-4 lg:grid-cols-6">
-              {!bookInput ? 
+              {!bookInput ? (
                 <BookCardCms award={award} setUserVote={setUserVote} />
-               : 
+              ) : (
                 <BookCardApi
                   books={books}
                   award={award}
                   setUserVote={setUserVote}
                 />
-              }
+              )}
             </div>
           </>
         ) : (

@@ -17,9 +17,6 @@ export default async function handlerBookAndVote(req, res) {
       `items/books?filter[googleBooksId][_eq]=${book.id}&fields=*,awards.*`
     )
 
-    // console.log(foundedBook[0].title)
-    // console.log(award.name)
-
     if (foundedBook.length > 0) {
       const book = foundedBook[0]
 

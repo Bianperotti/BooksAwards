@@ -7,8 +7,6 @@ export const gBooksApi = axios.create({
 
 export default async function handleBooks(req, res) {
   const input = req.body.input
-  // res.status(200).json({input})
-  // console.log(input)
 
   try {
     const request = await gBooksApi.get(

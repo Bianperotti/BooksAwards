@@ -12,7 +12,6 @@ const AwardCard = ({ award }) => {
 
   const winnerBook = award.awarded_books.sort((a, b) => b.votes - a.votes)
   winnerBook.length = 1
-  console.log(winnerBook)
 
   return (
     <a
