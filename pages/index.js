@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import AwardCard from '../components/AwardCard'
 import { getAwards, getTotalVotes } from './api/awardsApi'
+import Share from '../components/Share'
 
 export async function getServerSideProps() {
   const awards = await getAwards()
@@ -38,6 +39,7 @@ const Home = ({ awards, totalVotes }) => {
             <AwardCard award={award} key={award.id} />
           ))}
         </div>
+        <Share />
       </main>
     </div>
   )
