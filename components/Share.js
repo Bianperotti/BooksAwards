@@ -36,14 +36,14 @@ const Share = () => {
     <div>
       <button
         type="button"
-        className="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-pink-500 rounded shadow outline-none hover:shadow-lg focus:outline-none active:bg-pink-600"
+        className="px-6 py-3 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-pink-500 rounded shadow outline-none hover:shadow-lg focus:outline-none active:bg-pink-600"
         onClick={() => setShowModal(true)}
       >
-        Launch demo modal
+        Share with friends
       </button>
       {showModal ? (
         <>
-          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+          <div className="fixed inset-0 z-50 flex items-center justify-center h-full outline-none focus:outline-none">
             <div className="relative w-auto mx-auto my-6 ">
               {/*content*/}
               <div
@@ -55,6 +55,12 @@ const Share = () => {
                   src="73301242.svg"
                   className="object-cover w-full h-2/4 rounded-t-xl border-slate-200 "
                 ></img>
+                <a
+                  className="absolute text-xs font-thin text-right bottom-1/2 "
+                  href="https://www.freepik.com/vectors/flat-poster"
+                >
+                  Flat poster vector created by freepik - www.freepik.com
+                </a>
 
                 <div className="relative flex-auto p-6 text-center ">
                   <h3 className="text-3xl font-light ">This app rocks!</h3>
