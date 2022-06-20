@@ -17,7 +17,7 @@ const Home = ({ awards, totalVotes }) => {
         <title>Books awards</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Vote & fun with random BOOKS awards!" key="title" />
-        <meta property="og:image" content="meta_imagen.png" />
+        <meta property="og:image" content="/meta_imagen.png" />
       </Head>
 
       <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
