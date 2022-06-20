@@ -52,7 +52,7 @@ const Share = () => {
               >
                 {/*header*/}
                 <img
-                  src="73301242.svg"
+                  src="/73301242.svg"
                   className="object-cover w-full h-2/4 rounded-t-xl border-slate-200 "
                 ></img>
                 <a
