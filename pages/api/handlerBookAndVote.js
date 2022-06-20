@@ -1,10 +1,9 @@
 import axios from 'axios'
-const api_key = '^jjw.MT2L[z]RZ^X@P38cYc;jynw]_'
+const api_key = process.env.API_KEY_CMS
 
 export const apiCms = axios.create({
   baseURL: 'https://stingray-app-ozczk.ondigitalocean.app/',
 })
-
 
 export default async function handlerBookAndVote(req, res) {
   const book = req.body.book

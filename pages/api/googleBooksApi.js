@@ -1,5 +1,5 @@
 import axios from 'axios'
-const api_key = 'AIzaSyBu75hzVYtOERFnE3061uY53GTVq__9-d8'
+const api_key = process.env.API_KEY_GOOGLE
 
 export const gBooksApi = axios.create({
   baseURL: 'https://www.googleapis.com/books/v1/volumes?q=',
