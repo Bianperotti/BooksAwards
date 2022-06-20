@@ -48,7 +48,7 @@ const Share = () => {
               {/*content*/}
               <div
                 ref={modalRef}
-                className="relative flex h-[28rem] max-h-[28rem] w-96 flex-col rounded-xl border-0 bg-white shadow-lg outline-none focus:outline-none"
+                className="relative flex h-[28rem] max-h-[28rem] w-80 flex-col rounded-xl border-0 bg-white shadow-lg outline-none focus:outline-none sm:w-96"
               >
                 {/*header*/}
                 <img
