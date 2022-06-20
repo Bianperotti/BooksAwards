@@ -10,10 +10,26 @@ import {
   PinterestShareButton,
   PinterestIcon,
 } from 'react-share'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Share = () => {
   const [showModal, setShowModal] = useState(false)
+
+  let modalRef = useRef()
+
+  useEffect(() => {
+    let handler = (event) => {
+      if (!modalRef.current?.contains(event.target)) {
+        setShowModal(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handler)
+
+    return () => {
+      document.removeEventListener('mousedown', handler)
+    }
+  })
 
   const shareUrl = 'https://books-awards.vercel.app/'
   return (
@@ -30,11 +46,14 @@ const Share = () => {
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
             <div className="relative w-auto mx-auto my-6 ">
               {/*content*/}
-              <div className="relative flex h-[28rem] max-h-[28rem] w-96 flex-col rounded-xl border-0 bg-white shadow-lg outline-none focus:outline-none">
+              <div
+                ref={modalRef}
+                className="relative flex h-[28rem] max-h-[28rem] w-96 flex-col rounded-xl border-0 bg-white shadow-lg outline-none focus:outline-none"
+              >
                 {/*header*/}
                 <img
                   src="73301242.svg"
-                  className="object-cover w-full rounded-t-xl h-2/4 border-slate-200 "
+                  className="object-cover w-full h-2/4 rounded-t-xl border-slate-200 "
                 ></img>
 
                 <div className="relative flex-auto p-6 text-center ">
