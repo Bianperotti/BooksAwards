@@ -22,6 +22,7 @@ const Home = ({ awards, totalVotes }) => {
           key="title"
         />
         <meta property="og:image" content="/meta_imagen.png" />
+        <meta property="twitter:image" content="/meta_imagen.png" />
       </Head>
       <div className="flex flex-col items-center justify-center py-2">
         <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
