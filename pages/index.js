@@ -33,7 +33,7 @@ const Home = ({ awards, totalVotes }) => {
           content="Vote & fun with random BOOKS awards!"
         />
         <meta property="twitter:description" content="" />
-        <meta property="twitter:image" content="/meta_imagen.png" />
+        <meta property="twitter:image" content="/meta_image.png" />
       </Head>
       <div className="flex flex-col items-center justify-center py-2">
         <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
