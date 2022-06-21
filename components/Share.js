@@ -86,7 +86,7 @@ const Share = () => {
 
                     <TwitterShareButton
                       url={shareUrl}
-                      title={'Vote in Random books awards'}
+                      title={'"Vote & fun with random BOOKS awards!'}
                       hashtags={['booktwitter']}
                     >
                       <TwitterIcon size={32} round={true} className="m-0.5" />
@@ -94,7 +94,7 @@ const Share = () => {
 
                     <LinkedinShareButton
                       url={shareUrl}
-                      title={'Vote in Random books awards'}
+                      title={'"Vote & fun with random BOOKS awards!'}
                       hashtags={['booktwitter']}
                     >
                       <LinkedinIcon size={32} round={true} className="m-0.5" />
@@ -102,10 +102,10 @@ const Share = () => {
 
                     <PinterestShareButton
                       url={shareUrl}
-                      title={'Vote in Random books awards'}
+                      title={'Vote & fun with random BOOKS awards!'}
                       hashtags={['booktwitter']}
                       media={
-                        'https://stingray-app-ozczk.ondigitalocean.app/assets/596b2be9-bfa3-48e1-b7f7-d2cc79ee2b4d.png'
+                        '/metaimagepinterest.png'
                       }
                     >
                       <PinterestIcon size={32} round={true} className="m-0.5" />
