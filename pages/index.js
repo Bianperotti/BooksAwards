@@ -22,7 +22,18 @@ const Home = ({ awards, totalVotes }) => {
           key="title"
         />
         <meta property="og:image" content="/meta_image.png" />
-        <meta property="twitter:image" content="/meta_image.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://books-awards.vercel.app/"
+        />
+        <meta
+          property="twitter:title"
+          content="Vote & fun with random BOOKS awards!"
+        />
+        <meta property="twitter:description" content="" />
+        <meta property="twitter:image" content="/meta_imagen.png" />
       </Head>
       <div className="flex flex-col items-center justify-center py-2">
         <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
