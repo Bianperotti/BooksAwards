@@ -21,7 +21,7 @@ const Home = ({ awards, totalVotes }) => {
           content="Vote & fun with random BOOKS awards!"
           key="title"
         />
-        <meta property="og:image" itemprop="image" content="/meta_image.png" />
+        <meta property="og:image" content="/meta_image.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
