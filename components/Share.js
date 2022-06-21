@@ -86,7 +86,7 @@ const Share = () => {
 
                     <TwitterShareButton
                       url={shareUrl}
-                      title={'"Vote & fun with random BOOKS awards!'}
+                      title={'Vote & fun with random BOOKS awards!'}
                       hashtags={['booktwitter']}
                     >
                       <TwitterIcon size={32} round={true} className="m-0.5" />

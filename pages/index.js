@@ -16,19 +16,21 @@ const Home = ({ awards, totalVotes }) => {
       <Head>
         <title>Books awards</title>
         <link rel="icon" href="/favicon.ico" />
+
         // facebook
         <meta
           property="og:title"
           content="Vote & fun with random BOOKS awards!"
           key="title"
         />
-        <meta property="og:image" content="/metaimage.jpg" />
+        <meta property="og:image" content="/metaimage1200.jpg" />
+
         //twitter
         <meta property="twitter:card" content="summary_large_image" />
-        <meta
+        {/* <meta
           property="twitter:url"
           content="https://books-awards.vercel.app/"
-        />
+        /> */}
         <meta
           property="twitter:title"
           content="Vote & fun with random BOOKS awards!"
