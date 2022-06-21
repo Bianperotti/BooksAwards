@@ -9,6 +9,11 @@ export async function getServerSideProps(context) {
   const slug = context.params.slug
   const award = await getAward(slug)
 
+  const forwarded = context.req.headers['x-forwarded-for']
+  const ip = forwarded
+    ? forwarded.split(/, /)[0]
+    : context.req.connection.remoteAddress
+
   if (!award) {
     return {
       redirect: {
@@ -19,15 +24,17 @@ export async function getServerSideProps(context) {
     }
   }
 
-  return { props: { award } }
+  return { props: { award, ip } }
 }
 
-const votePage = ({ award }) => {
+const votePage = ({ award, ip }) => {
   const [books, setBooks] = useState([])
   const [bookInput, setBookInput] = useState('')
   const [userVote, setUserVote] = useState(false)
 
   const inputRef = useRef(null)
+
+  console.log(ip)
 
   useEffect(() => {
     const timer = setTimeout(() => {
