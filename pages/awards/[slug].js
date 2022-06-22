@@ -77,7 +77,7 @@ const votePage = ({ award, ip, userVoted }) => {
                 value={bookInput}
                 ref={inputRef}
               ></input>
-              <div className="grid grid-cols-2 mt-16 gap-x-8 gap-y-16 sm:grid-cols-4 lg:grid-cols-6">
+              <div className="grid grid-cols-2 mt-16 mb-16 gap-x-8 gap-y-16 sm:grid-cols-4 lg:grid-cols-6">
                 {!bookInput ? (
                   <BookCardCms
                     award={award}
