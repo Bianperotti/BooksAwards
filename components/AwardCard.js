@@ -22,6 +22,8 @@ const AwardCard = ({ award }) => {
       <div className="relative">
         <img
           className="relative rounded-lg -top-14 w-36"
+          sizes="50vw"
+          alt="Winner book cover"
           src={`https://stingray-app-ozczk.ondigitalocean.app/assets/${winnerBook[0].book.cover}`}
         ></img>
       </div>

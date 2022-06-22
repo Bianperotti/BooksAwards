@@ -16,7 +16,11 @@ const Home = ({ awards, totalVotes }) => {
       <Head>
         <title>Books awards</title>
         <link rel="icon" href="/favicon.ico" />
-
+        <meta
+          name="description"
+          content="Random books awards, 
+          remios de libros. Vote and fun with random books awards.  "
+        ></meta>
         // facebook
         <meta
           property="og:title"
@@ -24,7 +28,6 @@ const Home = ({ awards, totalVotes }) => {
           key="title"
         />
         <meta property="og:image" content="/metaimage1200.jpg" />
-
         //twitter
         <meta property="twitter:card" content="summary_large_image" />
         {/* <meta

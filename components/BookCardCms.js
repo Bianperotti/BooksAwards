@@ -18,6 +18,8 @@ const BookCardCms = ({ award, ip, setUserVote }) => {
         <div className="relative" key={book.id}>
           <img
             className="relative h-56 rounded-lg -top-2 w-36"
+            sizes="50vw"
+            alt="book cover"
             src={`https://stingray-app-ozczk.ondigitalocean.app/assets/${book.book.cover}`}
           ></img>
           <button

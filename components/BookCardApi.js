@@ -22,6 +22,8 @@ const BookCardApi = ({ books, award, ip, setUserVote }) => {
         <div className="relative" key={book.id}>
           <img
             className="relative h-56 rounded-lg -top-2 w-36"
+            sizes="50vw"
+            alt="book cover"
             // src={bigImage(book.volumeInfo.imageLinks)}
             // src={`https://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=fife=w400-h600&source=gbs_api`}
             src={book.volumeInfo.imageLinks?.thumbnail}

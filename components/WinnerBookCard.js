@@ -16,6 +16,7 @@ const WinnerBookCard = ({ book, i, votes }) => {
       >
         <img
           className="w-48 -top-2 h-72"
+          sizes="50vw"
           src={`https://stingray-app-ozczk.ondigitalocean.app/assets/${book.cover}`}
         ></img>
         {isVisible ? (
