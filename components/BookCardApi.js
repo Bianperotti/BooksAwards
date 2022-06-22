@@ -1,7 +1,7 @@
-import { foundBook } from '../pages/api/awardsApi'
+import { foundBook, addIp } from '../pages/api/awardsApi'
 import { useRouter } from 'next/router'
 
-const BookCardApi = ({ books, award, setUserVote }) => {
+const BookCardApi = ({ books, award, ip, setUserVote }) => {
   // const bigImage = (url) => {
   //   const imgUrl = url?.smallThumbnail
   //   const imgZoom = imgUrl?.replace('zoom=5', 'zoom=10')
@@ -9,8 +9,9 @@ const BookCardApi = ({ books, award, setUserVote }) => {
   // }
   const router = useRouter()
 
-  const handleClick = async (book) => {
+  const handleClick = async (book, award, ip, setUserVote) => {
     await foundBook(book, award)
+    await addIp(award, ip)
     setUserVote(true)
     router.replace(router.asPath)
   }
@@ -26,7 +27,7 @@ const BookCardApi = ({ books, award, setUserVote }) => {
             src={book.volumeInfo.imageLinks?.thumbnail}
           ></img>
           <button
-            onClick={() => handleClick(book)}
+            onClick={() => handleClick(book, award, ip, setUserVote)}
             className="px-4 py-2 text-xl text-white rounded w-36 bg-orange-500/75 hover:bg-orange-700/75 "
           >
             vote

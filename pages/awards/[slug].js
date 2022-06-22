@@ -14,6 +14,10 @@ export async function getServerSideProps(context) {
     ? forwarded.split(/, /)[0]
     : context.req.connection.remoteAddress
 
+  const ips = award.usersIp
+
+  const userVoted = ips?.includes(ip) ? true : false
+
   if (!award) {
     return {
       redirect: {
@@ -24,17 +28,15 @@ export async function getServerSideProps(context) {
     }
   }
 
-  return { props: { award, ip } }
+  return { props: { award, ip, userVoted } }
 }
 
-const votePage = ({ award, ip }) => {
+const votePage = ({ award, ip, userVoted }) => {
   const [books, setBooks] = useState([])
   const [bookInput, setBookInput] = useState('')
-  const [userVote, setUserVote] = useState(false)
+  const [userVote, setUserVote] = useState(userVoted)
 
   const inputRef = useRef(null)
-
-  console.log(ip)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -67,11 +69,12 @@ const votePage = ({ award, ip }) => {
             ></input>
             <div className="grid grid-cols-2 mt-16 gap-x-8 gap-y-16 sm:grid-cols-4 lg:grid-cols-6">
               {!bookInput ? (
-                <BookCardCms award={award} setUserVote={setUserVote} />
+                <BookCardCms award={award} ip={ip} setUserVote={setUserVote} />
               ) : (
                 <BookCardApi
                   books={books}
                   award={award}
+                  ip={ip}
                   setUserVote={setUserVote}
                 />
               )}

@@ -5,21 +5,19 @@ export const apiCms = axios.create({
   baseURL: 'https://stingray-app-ozczk.ondigitalocean.app/',
 })
 
-export default async function handlerVote(req, res) {
+export default async function handlerIps(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' })
   }
 
-  const id = req.body.id
+  const award = req.body.award
+  const ip = req.body.ip
 
   try {
-    const awardedBook = await apiCms.get(`items/awards_books/${id}`)
-    const newVotes = awardedBook.data.data.votes + 1
-
-    const updateVotes = await apiCms.patch(
-      `items/awards_books/${id}`,
+    const updateIps = await apiCms.patch(
+      `items/awards/${award.id}`,
       {
-        votes: newVotes,
+        usersIp: award.usersIp ? [...award.usersIp, ip] : ip
       },
       {
         headers: {

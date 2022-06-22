@@ -16,7 +16,7 @@ export async function getAwards() {
 
 export async function getAward(slug) {
   const awardReq = await apiCms.get(
-    `items/awards?fields=id,name,slug,colours,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover&filter[slug][_eq]=${slug}`
+    `items/awards?fields=id,name,slug,colours,usersIp,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover&filter[slug][_eq]=${slug}`
   )
 
   const { data: award } = awardReq
@@ -51,4 +51,12 @@ export async function getTotalVotes() {
   const { data: totalVotes } = awardsReq
 
   return totalVotes.data[0].sum.votes
+}
+
+export async function addIp(award, ip) {
+  const handleIps = await axios.post('/api/handlerIps', {
+    award,
+    ip,
+  })
+  return handleIps
 }
