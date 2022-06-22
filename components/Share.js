@@ -104,9 +104,7 @@ const Share = () => {
                       url={shareUrl}
                       title={'Vote & fun with random BOOKS awards!'}
                       hashtags={['booktwitter']}
-                      media={
-                        '/metaimagepinterest.png'
-                      }
+                      media={'https://books-awards.vercel.app/metaimagepinterest.jpg'}
                     >
                       <PinterestIcon size={32} round={true} className="m-0.5" />
                     </PinterestShareButton>
