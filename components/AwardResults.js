@@ -2,7 +2,8 @@ import WinnerBookCard from './WinnerBookCard'
 
 const AwardResults = ({ award }) => {
   const sortedBooks = award.awarded_books.sort((a, b) => b.votes - a.votes)
-  sortedBooks.length = 4
+
+  if (sortedBooks.length > 4) sortedBooks.length = 4
 
   return (
     <>
