@@ -1,4 +1,4 @@
-@api_key=AIzaSyBu75hzVYtOERFnE3061uY53GTVq__9-d8
+@api_key = {{$processEnv API_KEY_GOOGLE}}
 
 GET https://www.googleapis.com/books/v1/volumes?q=a+court+of+mist&intitle&maxResults=3&Keyes&key={{api_key}}
 
