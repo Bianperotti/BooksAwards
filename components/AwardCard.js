@@ -4,7 +4,8 @@ const colors = {
   orange: 'from-orange-500/50 to-orange-700/50',
   red: 'from-red-500/50 to-orange-700/50',
   green2: 'from-green-400/50 to-emerald-600/50',
-  pink: 'from-fuchsia-500/50 to-pink-600/50',
+  pink: 'from-pink-400/50 to-pink-600/50',
+  yellow: 'from-amber-300/50 to-amber-600/50'
 }
 
 const AwardCard = ({ award }) => {
