@@ -55,12 +55,6 @@ const Share = () => {
                   src="/73301242.svg"
                   className="object-cover w-full h-2/4 rounded-t-xl border-slate-200 "
                 ></img>
-                <a
-                  className="absolute text-xs font-thin text-right bottom-1/2 "
-                  href="https://www.freepik.com/vectors/flat-poster"
-                >
-                  Flat poster vector created by freepik - www.freepik.com
-                </a>
 
                 <div className="relative flex-auto p-6 text-center ">
                   <h3 className="text-3xl font-light ">This app rocks!</h3>
@@ -104,7 +98,9 @@ const Share = () => {
                       url={shareUrl}
                       title={'Vote & fun with random BOOKS awards!'}
                       hashtags={['booktwitter']}
-                      media={'https://books-awards.vercel.app/metaimagepinterest.jpg'}
+                      media={
+                        'https://books-awards.vercel.app/metaimagepinterest.jpg'
+                      }
                     >
                       <PinterestIcon size={32} round={true} className="m-0.5" />
                     </PinterestShareButton>
