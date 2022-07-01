@@ -14,6 +14,10 @@ const BookCardApi = ({ books, award, ip, setUserVote }) => {
     await addIp(award, ip)
     setUserVote(true)
     router.replace(router.asPath)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
   }
 
   return (

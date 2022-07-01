@@ -10,6 +10,11 @@ const BookCardCms = ({ award, ip, setUserVote }) => {
     addIp(award, ip)
 
     setUserVote(true)
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
   }
 
   return (
