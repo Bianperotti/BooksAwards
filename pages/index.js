@@ -48,7 +48,7 @@ const Home = ({ awards, totalVotes }) => {
         <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
           <div className="flex items-center mb-8 lg:mb-16">
             <div className="flex flex-col gap-y-7 lg:w-3/5 ">
-              <h1 className="text-6xl sm:text-7xl sm:leading-[1.2] ">
+              <h1 className="text-6xl leading-[1.2] sm:text-7xl sm:leading-[1.2] ">
                 <span className="px-2 text-white bg-orange-500">Vote</span> &
                 fun with random <span className="text-emerald-500 ">BOOKS</span>{' '}
                 awards!
