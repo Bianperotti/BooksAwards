@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import AwardCard from '../components/AwardCard'
 import { getAwards, getTotalVotes } from './api/awardsApi'
+import Script from 'next/script'
 
 export async function getServerSideProps() {
   const awards = await getAwards()
@@ -49,6 +50,16 @@ const Home = ({ awards, totalVotes }) => {
         />
       </Head>
       <div className="flex flex-col items-center justify-center py-2">
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-X6LN00DBP8"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-X6LN00DBP8');
+        </script>
         <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
           <div className="flex items-center mb-8 lg:mb-16">
             <div className="flex flex-col gap-y-7 lg:w-3/5 ">
