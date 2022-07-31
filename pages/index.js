@@ -61,7 +61,7 @@ const Home = ({ awards, totalVotes }) => {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'GA_MEASUREMENT_ID');
+          gtag('config', 'G-X6LN00DBP8');
         `}
         </Script>
         <main className="container flex flex-col items-center justify-center flex-1 w-full max-w-5xl px-6 font-semibold lg:px-0 ">
