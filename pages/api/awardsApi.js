@@ -16,7 +16,8 @@ export async function getAwards() {
 
 export async function getAward(slug) {
   const awardReq = await apiCms.get(
-    `items/awards?fields=id,name,slug,colours,usersIp,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover&filter[slug][_eq]=${slug}`
+    // `items/awards?fields=id,name,slug,colours,usersIp,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover&filter[slug][_eq]=${slug}`
+    `items/awards?fields=id,name,slug,colours,users_ip,awarded_books.id,awarded_books.votes,awarded_books.book.title,awarded_books.book.id,awarded_books.book.cover&filter[slug][_eq]=${slug}`
   )
 
   const { data: award } = awardReq

@@ -15,7 +15,7 @@ export async function getServerSideProps(context) {
     ? forwarded.split(/, /)[0]
     : context.req.connection.remoteAddress
 
-  const ips = award.usersIp
+  const ips = award.users_ip
 
   const userVoted = ips?.includes(ip) ? true : false
 

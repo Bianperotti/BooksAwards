@@ -16,8 +16,11 @@ export default async function handlerIps(req, res) {
   try {
     const updateIps = await apiCms.patch(
       `items/awards/${award.id}`,
+      // {
+      //   usersIp: award.usersIp ? [...award.usersIp, ip] : ip
+      // },
       {
-        usersIp: award.usersIp ? [...award.usersIp, ip] : ip
+        users_ip: award.users_ip ? [...award.users_ip, ip] : ip
       },
       {
         headers: {
