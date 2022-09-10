@@ -42,11 +42,11 @@ const Home = ({ awards, totalVotes }) => {
         <meta property="twitter:description" content="" />
         <meta
           property="twitter:image:src"
-          content="https://books-awards.vercel.app/metaimage.jpg"
+          content="https://books-awards.vercel.app/metaimage2.jpg"
         />
         <meta
           property="twitter:image"
-          content="https://books-awards.vercel.app/metaimage.jpg"
+          content="https://books-awards.vercel.app/metaimage2.jpg"
         />
       </Head>
       <div className="flex flex-col items-center justify-center py-2">
