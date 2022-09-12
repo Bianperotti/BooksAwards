@@ -10,16 +10,10 @@ export async function getServerSideProps(context) {
   const slug = context.params.slug
   const award = await getAward(slug)
 
-  const forwarded = context.req.headers['x-forwarded-for']
+  const ip = context.req.headers['x-forwarded-for'] ?? context.req.connection.remoteAddress
   
-  console.log(forwarded);
-  console.log(context.req.connection.remoteAddress);
-
-  const ip = forwarded
-    ? forwarded.split(/, /)[0]
-    : context.req.connection.remoteAddress
-
-  
+  console.log(ip);
+  console.log(context.req.ip);
 
   const ips = award.users_ip
 
